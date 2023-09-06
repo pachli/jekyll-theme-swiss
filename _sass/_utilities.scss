@@ -130,7 +130,7 @@
 .ml-4 { margin-left: $spacer-4; }
 
 // Responsive margin
-@media (min-width: 52em) {
+@media (min-width: $breakpoint-lg) {
   .mx-lg-auto { margin-left: auto; margin-right: auto; }
 
   .mt-lg-0 { margin-top: 0; }
@@ -179,6 +179,19 @@
     color: $color-primary-link;
     text-decoration: none !important;
   }
+}
+
+// Hide elements below certain sizes
+@media (max-width: $breakpoint-lg) {
+  .hide-lg { display: none; }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .hide-sm { display: none; }
+}
+
+@media (max-width: $breakpoint-xs) {
+  .hide-xs { display: none; }
 }
 
 // Drop shadow on images
