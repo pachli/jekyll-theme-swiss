@@ -64,8 +64,12 @@
 .col-11 { width: (11 / 12 * 100%); }
 .col-12 { width: 100%; }
 
-@media (max-width: $breakpoint-lg) {
+@media (max-width: $breakpoint-md) {
   .sm-width-full { width: 100% !important; }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .xs-width-full { width: 100% !important; }
 }
 
 .block        { display: block !important; }
@@ -183,15 +187,19 @@
 
 // Hide elements below certain sizes
 @media (max-width: $breakpoint-lg) {
-  .hide-lg { display: none; }
+  .lg-hide { display: none !important; }
 }
 
 @media (max-width: $breakpoint-sm) {
-  .hide-sm { display: none; }
+  .sm-hide { display: none !important; }
+}
+
+@media (max-width: $breakpoint-md) {
+  .md-hide { display: none !important; }
 }
 
 @media (max-width: $breakpoint-xs) {
-  .hide-xs { display: none; }
+  .xs-hide { display: none !important; }
 }
 
 // Drop shadow on images
