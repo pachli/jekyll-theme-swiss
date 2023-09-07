@@ -202,7 +202,20 @@
   .xs-hide { display: none !important; }
 }
 
+@media (max-width: $breakpoint-xxs) {
+  .xxs-hide { display: none !important; }
+}
+
 // Drop shadow on images
 .shadow {
   filter: drop-shadow(1px 1px 2px black);
+}
+
+// Grid for items on the home page header.
+// 12 columns, first 8 are for title and screenshot, second 4 are for
+// the logo and links.
+.home-header-grid {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  align-items: center;
 }
