@@ -211,11 +211,64 @@
   filter: drop-shadow(1px 1px 2px black);
 }
 
-// Grid for items on the home page header.
-// 12 columns, first 8 are for title and screenshot, second 4 are for
-// the logo and links.
+// Grid for the primary items on the home page header.
+// 2/3 space for the title, 1/3 space for the logo
 .home-header-grid {
   display: grid;
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
+}
+
+#logo {
+  justify-self: right;
+}
+
+// Grid for the secondary items, the phone screenshot and the icons,
+// split 50/50.
+.home-header-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#header-screenshot {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#icon-row {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: right;
+}
+
+#description {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: right;
+}
+
+@media (max-width: $breakpoint-xs) {
+  #header-screenshot {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #icon-row {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: left;
+  }
 }
