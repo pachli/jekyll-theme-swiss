@@ -20,9 +20,11 @@ code {
 
   a {
     text-decoration: underline dotted;
+    text-decoration-color: $color-text-decoration;
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $color-text-decoration;
     }
   }
 
