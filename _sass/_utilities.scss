@@ -2,11 +2,23 @@
 .h0 {
   font-size: $h0-mobile;
   line-height: 1.0125;
-  margin-top: 0.85em;
   word-wrap: break-word;
 
-  @media (min-width: $breakpoint-lg) {
-    font-size: $h0-desktop;
+  @media (min-width: $breakpoint-xs) {
+    font-size: $h0-xs;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $h0-sm;
+  }
+}
+
+.h5 {
+  font-size: $h5-mobile;
+  word-wrap: break-word;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $h5-sm;
   }
 }
 

@@ -21,7 +21,10 @@
         </div>
 
         <div class="home-header-grid container mx-auto header-text px-2">
-          <h1 class="h0 mt-3 header-title">{{ site.title }}</h1>
+          <div>
+            <h1 class="h0 mt-3 header-title">{{ site.title }}</h1>
+            <p class="h5 lh-condensed font-smoothing py-1">{{ site.subtitle }}</p>
+          </div>
 
           <div id="logo" class="xss-hide">
             <img
@@ -32,7 +35,6 @@
               alt="{{ page.logo.alt }}">
           </div>
         </div>
-
 
         <div class="home-header-grid2 container mx-auto px-2 mb-0 py-0 header-text" style="align-items: end;">
           <div id="header-screenshot" class="py-0">
@@ -48,9 +50,15 @@
               <div class="inline-block mr-1 sm-hide">
                 {% include dot-accent.html %}
               </div>
+
               <div class="inline-block mr-1 sm-hide">
                 {% include dot-accent.html %}
               </div>
+
+              <div class="inline-block mr-1 sm-hide">
+                {% include nivenly.html %}
+              </div>
+
               <div class="inline-block mr-1">
                 {% include github.html %}
               </div>
