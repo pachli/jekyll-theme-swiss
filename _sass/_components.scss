@@ -19,12 +19,12 @@ code {
 .prose {
   a {
     text-decoration: underline;
-    text-decoration-thickness: from-font;
+    text-decoration-thickness: 12%;
     text-decoration-color: $color-text-decoration;
 
     &:hover {
       text-decoration: underline;
-      text-decoration-thickness: from-font;
+      text-decoration-thickness: 12%;
       text-decoration-color: $color-text-decoration;
     }
   }
