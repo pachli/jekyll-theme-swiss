@@ -63,3 +63,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.anchor {
+  display: none;
+}
+
+.anchorHolder:hover > .anchor {
+  display: inline;
+  font-weight: lighter;
+  font-size: smaller;
+}

@@ -8,7 +8,7 @@ layout: default
   </div>
 
   <div class="prose" itemprop="articleBody">
-      {{ content }}
+    {% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor" headerAttrs="class='anchorHolder'" %}
   </div>
 
 </article>
