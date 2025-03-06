@@ -51,7 +51,11 @@
 
 
 /* Theme color utilities */
-.header-background { background-color: $color-background; }
+.header-background {
+  background-color: $color-background;
+  color: $color-foreground;
+  background-image: url("/assets/img/binding-dark.png");
+}
 .header-border { border-color: $color-foreground; }
 .header-title { color: $color-title; }
 .header-text { color: $color-foreground; }
@@ -235,12 +239,68 @@
   justify-self: right;
 }
 
+// Grid for the article excerpts on the home page.
+.home-article-excerpt-grid {
+  display: grid;
+}
+
 // Grid for the secondary items, the phone screenshot and the icons,
 // split 50/50.
 .home-header-grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+}
+
+.why-grid {
+  display: grid;
+  // TODO: Change this at different breakpoints
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px
+}
+.why-card {
+  background-color: $color-secondaryContainer;
+  background-image: url("/assets/binding-dark.png");
+  color: $color-onSecondaryContainer;
+  // border: 1px solid $color-border;
+  border-radius: 8px;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .body {
+    color: $color-onSecondaryContainer;
+    margin: $spacer-2;
+    margin-left: $spacer-3;
+  }
+}
+
+.contribute-card {
+  margin-right: $spacer-2;
+  margin-bottom: $spacer-2;
+
+  padding: $spacer-2;
+  border-radius: 8px;
+
+  text-align: center;
+
+  p {
+    width: 100% !important;
+  }
+}
+
+#footer ul li {
+  list-style-type: none;
+  a {
+    color: $color-text-accent;
+  }
 }
 
 #header-screenshot {
@@ -284,3 +344,4 @@
     justify-self: left;
   }
 }
+

@@ -1,0 +1,6 @@
+<!-- Renders post date, title. -->
+<div class="py-1 mb-1 prose">
+  <a class="no-underline h5 bold text-accent" title="{{ post.url | prepend: site.baseurl }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+  <h3 class="lh-condensed col-9 mt-0">
+    <a class="link-primary" title="{{ post.url | prepend: site.baseurl }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+</div>

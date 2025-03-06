@@ -31,8 +31,8 @@ body {
     font-family: $body-font-family;
     font-size: $body-font-size;
     line-height: 1.5;
-    color: $color-body-text;
-    background-color: #fff;
+    color: $color-onSurface;
+    background-color: $color-surface; //#f7f7f7;
 }
 
 p {

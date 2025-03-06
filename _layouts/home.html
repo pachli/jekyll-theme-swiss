@@ -79,12 +79,133 @@
         </div>
       </header>
 
-      <div class="container mx-auto px-2 py-4">
-        {% for post in site.posts %}
+
+
+      <div class="container mx-auto px-2 py-1">
+        <h1>Latest news</h1>
+
+        <!--
+      
+        -->
+
+        {% assign latest_posts = site.posts | sort:"date" | reverse %}
+
+        <div class="home-article-excerpt-grid">
+		{% for post in latest_posts limit:1 %}
+          <div style="grid-column: 1/4; grid-row: 1/4;">
           {% include post_block.html %}
-        {% endfor %}
+          </div>
+    {% endfor %}
+
+            {% for post in latest_posts limit:3 offset:1 %}
+              <div style="grid-row: {{forloop.index +1 }}/{{forloop.index + 1}}; grid-column:4/6;">
+              {% include post_headline.html %}
+              </div>
+            {% endfor %}
+
+            <div style="grid-row: 4/4; grid-column: 4/6;">
+              <p><a class="no-underline h4 bold text-accent" href="/blog/">More news</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODO: "More news" that links to rest of blog -->
       </div>
 
+      <div class="container mx-auto px-2 prose">
+        <h1>A better way to read social media</h1>
+
+        <div class="why-grid">
+          <div class="why-card prose" style="grid-column: 1/1; grid-row: 1/1">
+            <img src="/assets/img/why-card-placeholder.png">
+
+            <div class="body">
+              <h3>Control your timeline</h3>
+              <p>With filters and dedicated anti-harassment controls</p>
+            </div>
+          </div>
+
+          <div class="why-card prose" style="grid-column: 2/2; grid-row: 1/1">
+            <img src="/assets/img/why-card-placeholder.png">
+            <div class="body">
+              <h3>Don't lose your place</h3>
+              <p>Pachli remembers where you read to, so you can always jump back in where you left off</p>
+            </div>
+          </div>
+
+          <div class="why-card prose" style="grid-column: 3/3; grid-row: 1/1">
+            <img src="/assets/img/why-card-placeholder.png">
+            <div class="body">
+              <h3>No ads, no trackers</h3>
+              <p>Pachli contains no ads, no trackers, and does not sell your data.</p>
+            </div>
+          </div>
+
+          <div class="why-card prose" style="grid-column: 1/1; grid-row: 2/2">
+            <img src="/assets/img/why-card-placeholder.png">
+            <div class="body">
+              <h3>Accessible</h3>
+              <p>Accessibility features including different fonts, font sizes, and full TalkBack support.</p>
+            </div>
+          </div>
+
+          <div class="why-card prose" style="grid-column: 2/2; grid-row: 2/2;">
+            <img src="/assets/img/why-card-placeholder.png">
+            <div class="body">
+              <h3>Speaks your language</h3>
+              <p>Available in more then 50 languages, Pachli can translate posts for you and warn you if you are posting in the wrong language.</p>
+            </div>
+          </div>
+
+          <div class="why-card prose" style="grid-column: 3/3; grid-row: 2/2">
+            <img src="/assets/img/why-card-placeholder.png">
+            <div class="body">
+              <h3>Open Source</h3>
+              <p>Benefit from the work of a community of contributors</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Learn more about using Pachli</p>
+      </div>
+
+      <div class="container mx-auto px-2 prose">
+        <h1>Get involved</h1>
+
+        <p>Join the community and help create a Fediverse that belongs to everybody.</p>
+ 
+        <div style="display: grid">
+          <div class="contribute-card" style="grid-column: 1/1; grid-row: 1/1">
+            <p><img src="/assets/img/undraw_work-chat_hc3y.png"></p>
+            <h3>Translate</h3>
+            <p class="prose">Translate in to new languages, or keep existing ones up to date.</p>
+            <!-- TODO: Link -->
+          </div>
+
+          <div class="contribute-card" style="grid-column: 2/2; grid-row: 1/1">
+            <p><img src="/assets/img/undraw_pair-programming_9jyg.png"></p>
+            <h3>Code</h3>
+            <p class="prose">Help with new features and bug fixing.</p>
+            <!-- TODO: Link -->
+
+          </div>
+
+          <div class="contribute-card" style="grid-column: 3/3; grid-row: 1/1">
+            <p><img src="/assets/img/undraw_fixing-bugs_13mt.png"></p>
+            <h3>Report</h3>
+            <p class="prose">Found a problem? Let us know.</p>
+            <!-- TODO: Link -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="header-background mt-2">
+        <div class="container mx-auto py-2 prose">
+          <h1 class="header-text" style="text-align: center;">Nivenly Foundation</h1>
+          <p class="py-2 mx-auto" style="text-align:center;">Pachli is a member project of the Nivenly Foundation, member controlled and democratically governed. Join the Nivenly Foundation and help make Pachli, and projects like it, even better.</div>
+        </div>
+      </div>
     </div>
 
     {% include footer.html %}

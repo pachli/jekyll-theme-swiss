@@ -12,7 +12,7 @@ $color-background: $blue !default;
 $color-dot-accent: $orange !default;
 $color-foreground: $white !default;
 $color-title: $white !default;
-$color-body-text: $black !default;
+$color-body-text: $gray !default;
 $color-text-accent: $orange-dark !default;
 $color-code: $gray !default;
 $color-nav-link: $white !default;
@@ -20,6 +20,39 @@ $color-primary-link: $blue !default;
 $color-border: $blue;
 $color-text-decoration: $orange-dark !default;
 
+
+// Copied from the Pachli Material colours
+// https://github.com/pachli/pachli-android/blob/main/core/designsystem/src/main/res/values/colors.xml
+$color-primary: #006686;
+$color-onPrimary: #FFFFFF;
+$color-primaryContainer: #C0E8FF;
+$color-onPrimaryContainer: #001E2B;
+$color-secondary: #4D616C;
+$color-onSecondary: #FFFFFF;
+$color-secondaryContainer: #D0E6F3;
+$color-onSecondaryContainer: #091E27;
+$color-tertiary: #5E5A7D;
+$color-onTertiary: #FFFFFF;
+$color-tertiaryContainer: #E4DFFF;
+$color-onTertiaryContainer: #1B1736;
+$color-error: #BA1A1A;
+$color-errorContainer: #FFDAD6;
+$color-onError: #FFFFFF;
+$color-onErrorContainer: #410002;
+// $color-background: #FBFCFE;
+$color-onBackground: #191C1E;
+$color-surface: #FBFCFE;
+$color-onSurface: #191C1E;
+$color-surfaceVariant: #DCE3E9;
+$color-onSurfaceVariant: #40484C;
+$color-outline: #71787D;
+$color-inverseOnSurface: #F0F1F3;
+$color-inverseSurface: #2E3133;
+$color-inversePrimary: #6FD2FF;
+$color-shadow: #000000;
+$color-surfaceTint: #006686;
+$color-outlineVariant: #C0C7CD;
+$color-scrim: #000000;
 
 // Import sass partials (used in all themes)
 @import
