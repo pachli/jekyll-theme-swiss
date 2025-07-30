@@ -17,6 +17,7 @@
   <link rel="manifest" href="/site.webmanifest">
   {% if site.mastodon %}
     <link rel="me" href="https://{{ site.mastodon.server }}/{{ site.mastodon.user }}">
+    <meta name="fediverse:creator" content="{{ site.mastodon.user }}@{{ site.mastodon.server }}">
   {% endif %}
   {% if site.plugins contains "jekyll-seo-tag" %}
     {% seo %}
