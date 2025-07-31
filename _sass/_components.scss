@@ -53,13 +53,12 @@ code {
   }
 
   img {
-
     max-width: 100%;
+    height: auto;
 
     @media (min-width: $breakpoint-lg) {
       max-width: (12 / 10 * 100%); // make image fill width of container on desktop
     }
-
   }
 
   blockquote {
