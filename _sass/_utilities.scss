@@ -2,7 +2,8 @@
 .h0 {
   font-size: $h0-mobile;
   line-height: 1.0125;
-  word-wrap: break-word;
+  overflow-wrap: normal;
+  hyphens: auto;
 
   @media (min-width: $breakpoint-xs) {
     font-size: $h0-xs;
@@ -15,7 +16,7 @@
 
 .h5 {
   font-size: $h5-mobile;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   @media (min-width: $breakpoint-sm) {
     font-size: $h5-sm;
